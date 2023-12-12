@@ -1,0 +1,296 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript"
+        src="file:///C:/Users/maxwe/OneDrive/%C3%81rea%20de%20Trabalho/portfolio/portfolio%20Maxwell/java.js"></script>
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="cabecalho" id="cabecalho">
+        <div class="atual">
+            Portfolio
+        </div>
+        <div>
+            <button class="btn-cabecalho" id="meus-servicos-button" onclick="trocarConteudo(1)">Meus Serviços</button>
+            <button class="btn-cabecalho" id="meus-contatos-button" onclick="trocarConteudo(2)">Contato</button>
+            <button class="btn-cabecalho" id="enviar-email-button" onclick="trocarConteudo(3)">Enviar um email</button>
+        </div>
+    </div>
+    <div class="corpo" id="corpo">
+        <div class="perfil">
+            <img src="./img-perfil.png">
+            <h1>Olá, meu nome é Maxwell</h1>
+            <p>Estudante em Análise e Desenvolvimento de Sistemas</p>
+        </div>
+        <div class="conteudo" id="conteudo">
+            
+        </div>
+    </div>
+    <div class="pe" id="pe">
+        <div class="pe-itens">
+            <p>Redes Sociais</p>
+            <div id="icon-1">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-facebook"></i>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+--------------------------------------CSS--------------------------------------
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.cabecalho {
+    background-color: #4466A2;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.cabecalho .atual {
+    font-size: 24px;
+}
+
+.cabecalho ul li:hover {
+    background-color: #6d87b5;
+}
+
+.cabecalho .btn-cabecalho{
+    background-color: #4466A2;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline;
+    list-style: none;
+    margin-right: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cabecalho .btn-cabecalho:hover{
+    background-color: #6d87b5;
+}
+
+.cabecalho .btn-ativo-cabecalho{
+    background-color: #404a5b;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline;
+    list-style: none;
+    margin-right: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    
+}
+
+.cabecalho .btn-cabecalho:hover{
+    background-color: #6d87b5;
+}
+
+.corpo {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+}
+
+.corpo ul{
+    list-style: none;
+    cursor: pointer;
+    border: solid 1px #333;
+    padding: 5px;
+}
+
+.corpo ul li {
+    display: inline;
+    margin-right: 20px;
+    padding: 10px 20px;
+    border: solid 1px transparent;
+    transition: border 0.5s;
+}
+
+.corpo img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 180px;
+    height: 200px;
+}
+
+.corpo h1 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.corpo .perfil{
+    width: 500px;
+}
+.corpo div > img, div > h1 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.corpo p {
+    font-size: 18px;
+    color: #555;
+}
+
+.corpo button {
+    background-color: #4466A2;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.corpo button:hover {
+    background-color: #33528A;
+}
+
+.pe {
+    background-color: #4466A2;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.pe h3 {
+    font-size: 20px;
+}
+
+.pe-itens p {
+    font-size: 18px;
+}
+
+#icon-1 i {
+    font-size: 24px; /* Tamanho do ícone */
+    color: #333; /* Cor do ícone */
+    margin-right: 10px; /* Espaçamento à direita */
+}
+
+div.mais {
+    text-align: center;
+    margin: 30px;
+}
+
+h1{
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h3{
+    color: #F75C4E;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+section p {
+    font-size: 18px;
+    color: #555;
+}
+
+input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+-----------------------------------JAVASCRIPT----------------------------------
+function trocarConteudo(param) {
+    
+    var conteudo = document.getElementById("conteudo");
+    var botao;
+    var verify;
+
+    if (conteudo && param === 1) {
+
+        if(verify!==1){
+            var botao = document.getElementById("meus-contatos-button");
+            botao.classList.remove("btn-ativo-cabecalho");
+            botao.classList.add("btn-cabecalho");
+
+            var botao = document.getElementById("enviar-email-button");
+            botao.classList.remove("btn-ativo-cabecalho");
+            botao.classList.add("btn-cabecalho");
+        }
+        var verify = 1
+        if(botao.click){
+            var botao = document.getElementById("meus-servicos-button");
+            botao.classList.remove("btn-cabecalho");
+            botao.classList.add("btn-ativo-cabecalho");
+        }
+
+        conteudo.innerHTML = "<ul><li id='serv-1'>CentralPS: Prestação de serviços</li></ul>";
+    }
+    if (conteudo && param === 2) {//contatos
+        
+        if(verify!==2){
+            var botao = document.getElementById("meus-servicos-button");
+            botao.classList.remove("btn-ativo-cabecalho");
+            botao.classList.add("btn-cabecalho");
+
+            var botao = document.getElementById("enviar-email-button");
+            botao.classList.remove("btn-ativo-cabecalho");
+            botao.classList.add("btn-cabecalho");
+        }
+        var verify = 2
+        if(botao.click){
+            
+            var botao = document.getElementById("meus-contatos-button");
+            botao.classList.remove("btn-cabecalho");
+            botao.classList.add("btn-ativo-cabecalho");
+        }
+
+        conteudo.innerHTML = "<ul><li id='serv-1'>Contatos aqui</li></ul>";
+    }
+    if (conteudo && param === 3) {
+        if(verify!==3){
+            var botao = document.getElementById("meus-servicos-button");
+            botao.classList.remove("btn-ativo-cabecalho");
+            botao.classList.add("btn-cabecalho");
+
+            var botao = document.getElementById("meus-contatos-button");
+            botao.classList.remove("btn-ativo-cabecalho");
+            botao.classList.add("btn-cabecalho");
+        }
+        var verify = 3
+        if(botao.click){
+            var botao = document.getElementById("enviar-email-button");
+            botao.classList.remove("btn-cabecalho");
+            botao.classList.add("btn-ativo-cabecalho");
+        }
+
+        conteudo.innerHTML = "<div><h1>Envie seu email</h1><p>Digite aqui seu email e eu entrarei em contato:</p><input type='email' placeholder='seuemail@exemplo.com'><br><button>Enviar</button></div>";
+    }
+    console.log(verify)
+}
